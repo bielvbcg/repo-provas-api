@@ -1,4 +1,3 @@
-import { User } from "@prisma/client";
 import { UserCreateData } from "../interfaces";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -31,6 +30,13 @@ export async function getUserOrFail(login: UserCreateData) {
 
   const isPasswordValid = bcrypt.compareSync(login.password, user.password);
   if (!isPasswordValid) throw { type: "unauthorized", message: "Invalid credentials" }
+
+  return user;
+}
+
+export async function findUserById(id: number) {
+  const user = await userRepository.findById(id);
+  if (!user) throw { type: "not_found", message: "User not found" }
 
   return user;
 }
