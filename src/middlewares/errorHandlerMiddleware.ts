@@ -18,6 +18,10 @@ async function errorHandler(error: Errors, req: Request, res: Response, next: Ne
     return res.status(409).send(error.message)
   }
 
+  if (error.type === "unauthorized") {
+    return res.status(401).send(error.message)
+  }
+
   res.sendStatus(500)
 }
 

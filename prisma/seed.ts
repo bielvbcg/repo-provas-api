@@ -90,10 +90,3 @@ main()
   .finally(async () => {
     await prisma.$disconnect()
   })
-
-/* INSERT INTO terms("number") VALUES(1);
-INSERT INTO terms("number") VALUES(2);
-INSERT INTO terms("number") VALUES(3);
-INSERT INTO terms("number") VALUES(4);
-INSERT INTO terms("number") VALUES(5);
-INSERT INTO terms("number") VALUES(6); */
