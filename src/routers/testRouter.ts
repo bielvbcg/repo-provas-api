@@ -7,7 +7,9 @@ import testSchema from '../schemas/testSchema.js';
 const testRouter = Router()
 
 testRouter.use(ensureAuthenticatedMiddleware)
-testRouter.get("/tests/:group", testController.getTestsByGroup)
+testRouter.get("/categories", testController.getCategories)
+testRouter.get("/tests/disciplines", testController.getTestsByDisciplines)
+testRouter.get("/tests/teachers", testController.getTestsByTeachers)
 testRouter.post("/tests", validateSchemaMiddleware(testSchema), testController.createTest)
 
 export default testRouter

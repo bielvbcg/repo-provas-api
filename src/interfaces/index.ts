@@ -5,10 +5,17 @@ export interface User {
 }
 
 export interface Test {
+  id: number;
   name: string;
   pdfUrl: string;
   categoryId: number;
-  teacherDisciplineId: number;
+  teachersDisciplinesId: number;
 }
 
+export type GroupTypes =
+  | 'teachers'
+  | 'disciplines'
+  ;
+
 export type UserCreateData = Omit<User, "id">
+export type TestCreateData = Omit<Test, "id">

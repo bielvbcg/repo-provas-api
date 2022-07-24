@@ -59,13 +59,13 @@ model teachersDisciplines {
 }
 
 model Test {
-  id                  Int                 @id @default(autoincrement())
-  name                String
-  pdfUrl              String
-  category            Category            @relation(fields: [categoryId], references: [id])
-  categoryId          Int
-  teachersDisciplines teachersDisciplines @relation(fields: [teacherDisciplineId], references: [id])
-  teacherDisciplineId Int
+  id                    Int                 @id @default(autoincrement())
+  name                  String
+  pdfUrl                String
+  category              Category            @relation(fields: [categoryId], references: [id])
+  categoryId            Int
+  teachersDisciplines   teachersDisciplines @relation(fields: [teachersDisciplinesId], references: [id])
+  teachersDisciplinesId Int
 
   @@map("tests")
 }

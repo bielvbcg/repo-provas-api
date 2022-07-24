@@ -22,6 +22,7 @@ async function errorHandler(error: Errors, req: Request, res: Response, next: Ne
     return res.status(401).send(error.message)
   }
 
+  console.log(error)
   res.sendStatus(500)
 }
 
