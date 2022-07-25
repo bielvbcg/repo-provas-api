@@ -22,9 +22,9 @@ async function main() {
     { teacherId: 1, disciplineId: 1 },
     { teacherId: 1, disciplineId: 2 },
     { teacherId: 1, disciplineId: 3 },
-    { teacherId: 2, disciplineId: 1 },
-    { teacherId: 2, disciplineId: 2 },
-    { teacherId: 2, disciplineId: 3 },
+    { teacherId: 2, disciplineId: 4 },
+    { teacherId: 2, disciplineId: 5 },
+    { teacherId: 2, disciplineId: 6 },
   ]
 
   for (let i = 0; i < termsList.length; i++) {
